@@ -23,7 +23,8 @@ def create_parser():
 
 def get_most_frequent_words(words):
     counted_words = Counter(words)
-    return counted_words.most_common(10)
+    amount = 10
+    return counted_words.most_common(amount)
 
 
 if __name__ == '__main__':
