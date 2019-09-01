@@ -9,7 +9,7 @@ def load_data(filepath):
 
 
 def get_words_from_text(text):
-    text_without_digits = re.sub(r'\d+', '', text_file)
+    text_without_digits = re.sub(r'\d+', '', text)
     words_without_punctuation = re.findall(r'\w+', text_without_digits)
     return words_without_punctuation
 
@@ -30,8 +30,8 @@ def get_most_frequent_words(words):
 if __name__ == '__main__':
     try:
         filepath = create_parser().filepath
-        text_file = load_data(filepath)
-        words = get_words_from_text(text_file)
+        text = load_data(filepath)
+        words = get_words_from_text(text)
         counted_words = get_most_frequent_words(words)
         print('Самые популярные слова в тексте:')
         for word, count in counted_words:
