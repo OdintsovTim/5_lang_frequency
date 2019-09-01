@@ -33,7 +33,9 @@ if __name__ == '__main__':
         text_file = load_data(filepath)
         words = get_words_from_text(text_file)
         counted_words = get_most_frequent_words(words)
-        print(counted_words)
+        print('Самые популярные слова в тексте:')
+        for word, count in counted_words:
+            print(f'{word} - {count} шт.')
     except FileNotFoundError:
         print('Такого файла не существует')
     except UnicodeDecodeError:
