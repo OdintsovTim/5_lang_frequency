@@ -35,7 +35,7 @@ if __name__ == '__main__':
         counted_words = get_most_frequent_words(words)
         print('Самые популярные слова в тексте:')
         for word, count in counted_words:
-            print(f'{word} - {count} шт.')
+            print('{} - {} шт.'.format(word, count))
     except FileNotFoundError:
         print('Такого файла не существует')
     except UnicodeDecodeError:
